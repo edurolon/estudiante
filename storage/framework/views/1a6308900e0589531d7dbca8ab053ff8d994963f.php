@@ -39,6 +39,12 @@
                     <input type="text" name="age" class="form-control" placeholder="Edad">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Sexo:</strong>
+                    <input type="text" name="sexo" class="form-control" placeholder="Sexo">
+                </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>

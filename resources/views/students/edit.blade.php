@@ -16,7 +16,7 @@
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> Hubo un error al actualizar.<br><br>
+            <strong>Whoops!</strong> Hubo un error al actualizar los datos.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
