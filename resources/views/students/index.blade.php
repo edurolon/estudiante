@@ -1,15 +1,15 @@
 @extends('students.layout')
 
-@section('title','Students details')
+@section('title','Lista de Estudiantes')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Students Details</h2>
+                <h2>Lista de Estudiantes</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('students.create') }}"> Add New Student</a>
+                <a class="btn btn-success" href="{{ route('students.create') }}">Agregar nuevo estudiante</a>
             </div>
         </div>
     </div>
@@ -23,9 +23,9 @@
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th width="280px">Action</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th width="280px">Accion</th>
         </tr>
         @foreach ($students as $student)
             <tr>
@@ -35,14 +35,14 @@
                 <td>
                     <form action="{{ route('students.destroy',$student->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('students.show',$student->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('students.show',$student->id) }}">Mostrar</a>
 
-                        <a class="btn btn-primary" href="{{ route('students.edit',$student->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('students.edit',$student->id) }}">Editar</a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Borrar</button>
                     </form>
                 </td>
             </tr>

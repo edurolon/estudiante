@@ -1,22 +1,22 @@
 @extends('students.layout')
 
-@section('title','Edit Students details')
+@section('title','Editar estudiantes detalle')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Student Details</h2>
+                <h2>Editar estudiantes detalle</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('students.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('students.index') }}"> Atras</a>
             </div>
         </div>
     </div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>Whoops!</strong> Hubo un error al actualizar.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -32,18 +32,18 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
-                    <input type="text" name="name" value="{{ $student->name }}" class="form-control" placeholder="Name">
+                    <strong>Nombre:</strong>
+                    <input type="text" name="name" value="{{ $student->name }}" class="form-control" placeholder="Nombre">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Age:</strong>
-                    <input type="text" name="age" value="{{ $student->age }}" class="form-control" placeholder="Age">
+                    <strong>Edad:</strong>
+                    <input type="text" name="age" value="{{ $student->age }}" class="form-control" placeholder="Edad">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
         </div>
 
